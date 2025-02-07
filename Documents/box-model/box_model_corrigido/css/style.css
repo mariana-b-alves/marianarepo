@@ -1,0 +1,123 @@
+/******** Estilos Globais ********/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body{
+    font-family: Oswald, monospace;
+    font-weight: 400;
+    background-color: lightgray;
+}
+
+
+/*Links*/
+
+a:link{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+a:visited{
+    color: darkgray
+}
+
+a:hover{
+    color: tomato;
+}
+
+a.active{
+    color: tomato;
+    font-weight: 800;
+}
+
+/*Dar padding a center*/
+/* header{
+    text-align: center;
+} */
+
+/********************** MAIN **********************/
+
+main{  
+    background-color: white;
+
+    border: 8px double darkslategray;
+    border-radius: 12px;
+
+    width: 80%;
+    min-width: 800px;
+    max-width: 1240px;
+    margin: 50px auto;
+    padding: 2em;
+    
+}
+
+main > *{
+    width: 600px;
+
+    margin: 20px auto;
+}
+
+/********************** HEADER **********************/
+header{
+    text-align: center;
+}
+
+header span{
+    display: block;
+    line-height: .7em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+header span.analog{
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 1.2em;
+}
+
+/********************** NAV **********************/
+
+nav ul{
+    border-top: 2px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+}
+
+/********************** SECTION CONTENTS **********************/
+
+section.contents img{
+    /*NOVO CONCEITO - Colocar filtros nas imagens*/
+    filter: grayscale(1);
+}
+
+section.contents{
+    text-align: justify;
+    
+}
+
+section.contents h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+section.contents p {
+    padding-bottom: 15px;
+}
+
+/********************** FOOTER **********************/
+
+footer{
+    border-top:1px solid gray;
+    padding: 20px 0;
+    text-align: center;
+}
+
