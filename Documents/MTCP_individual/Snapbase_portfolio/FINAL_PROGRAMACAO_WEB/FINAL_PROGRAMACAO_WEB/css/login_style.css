@@ -1,0 +1,287 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* LOGIN */
+body{
+    margin:0; 
+    font-size:16px; 
+    font-family:'Roboto',sans-serif; 
+}
+
+h1,h2, h3, h4 ,p{margin:0;}
+
+.content{
+    width:1100px;
+    margin:0 auto;
+}
+
+*{box-sizing:border-box;}
+
+/*MENU*/
+
+.menu{
+    display: flex;
+    align-items: center;
+    background-color: rgba(246,244,244,0.8);
+	position:absolute;
+    justify-content: space-between;
+	top: 0;
+	left: 0;
+	width:100%;
+    height: auto;
+	padding-top: 26px;
+	padding-bottom: 24px;
+	padding-left: 40px;
+	padding-right:40px;
+}
+
+.menutext a {
+    color:#032255;
+    text-decoration:none;
+    margin-left:50px;
+    font-family:Helvetica;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.menu img{
+    width:70px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.menulogin a{
+    color:white;
+    background-color:#5A6794;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin-left:10px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+.menu-mobile{
+    display:none;
+}
+
+.title{
+    color:#5A6794;
+    font-size:40px;
+    text-align:center;
+    padding-bottom:30px;
+    padding-top:110px;
+}
+
+.subtitle{
+    text-align:center;
+    font-family:EB Garamond, serif;
+    font-size:30px;
+    padding-bottom:30px;
+}
+
+.subtitle span{
+    color:#8794C0;
+}
+
+.info{
+    text-align:center;
+    font-family:EB Garamond, serif;
+    font-size:15px;
+    font-weight:300;
+    padding-bottom:30px;
+}
+
+.sub{
+    margin:auto;
+    width:80%;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.input-elements{
+	border:3.5px solid #8794C0;
+    position:relative;
+	border-radius:20px;
+	margin-bottom:25px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height:50px;
+    width:60%;
+}
+
+.sub input{
+	padding-left:10px;
+	font-size:15px;
+	font-family:EB Garamond,serif;
+}
+
+.password-remember{
+    font-family:EB Garamond, serif;
+    font-weight:400;
+    text-align:center;
+    padding-bottom:50px;
+}
+
+.password-remember a{
+    text-decoration:none;
+    color:#8794C0;
+}
+
+.button-container{
+    display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+button{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:30px;
+    padding-right:20px;
+    border-color:rgba(111,111,111,0.4) transparent transparent;
+    cursor:pointer;
+}
+
+
+.login-button{
+    background-color:#5A6794;
+    border-radius:20px;
+    padding-left:20px;
+    margin-bottom:85px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.line{
+    border-bottom:2px solid rgba(184, 184, 182,0.5);
+    width:600px;
+    margin-bottom:85px;
+}
+
+.fb-login{
+    background-color:rgb(42,115,185);
+    border-radius:25px;
+    margin-bottom:30px;
+    padding-left:20px;
+    width:400px;
+    height:45px;
+}
+
+.fb-login img{
+    width:30px;
+    float:left;
+}
+
+.fb-login p{
+    padding-top:5px;
+}
+
+.google-login{
+    background-color:rgb(67,133,245);
+    border-radius:25px;
+    margin-bottom:30px;
+    padding-left:20px;
+    width:400px;
+    height:45px;
+}
+
+.google-login img{
+    width:30px;
+    float:left;
+}
+
+.google-login p{
+    padding-top:5px;
+}
+
+.links{
+    text-align:center;
+    font-size:13px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-right:100px;
+    font-family:EB Garamond, serif;
+}
+
+.links a{
+	color:black;
+    margin-left:100px;
+}
+
+.notices{
+    text-align:center;
+    font-family:EB Garamond, serif;
+}
+.recaptcha{
+    padding-bottom:30px;
+    font-size:13px;
+}
+
+.google-apply{
+    padding-bottom:50px;
+    font-size:13px;
+}
+
+@media all and (min-width:540px) and (max-width:768px){
+   
+    .menu img{
+        width:74px;
+    }
+
+    .menutext{
+        display:none;
+    }
+
+    .menulogin{
+        display:none;
+    }
+
+    .menu-mobile{
+        display:block;
+    }
+
+    .sub{
+        width:500px;
+    }
+    
+    .line{
+        width:400px;
+    }
+
+    .links{
+         margin-top:30px;
+    }
+  
+}
+
+
+@media all and (max-width:540px){
+
+    .menu img{
+        width:70px;
+    }
+
+    .menutext{
+        display:none;
+    }
+
+    .menulogin{
+        display:none;
+    }
+
+    .menu-mobile{
+        display:block;
+    }
+
+    .title h2{
+        text-align:center;
+        font-size:40px;
+    }
+
+}
