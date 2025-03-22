@@ -228,6 +228,12 @@ button{
     font-size:13px;
 }
 
+@media screen and (max-width:1200px){
+    .menu-mobile img{
+        width:40px
+    }
+}
+
 @media all and (min-width:540px) and (max-width:768px){
    
     .menu img{
@@ -246,6 +252,10 @@ button{
         display:block;
     }
 
+    .menu-mobile img{
+        width:40px
+    }
+
     .sub{
         width:500px;
     }
@@ -260,13 +270,11 @@ button{
   
 }
 
-
 @media all and (max-width:540px){
 
     .menu img{
-        width:70px;
-    }
-
+    width:60px
+}
     .menutext{
         display:none;
     }
@@ -277,6 +285,10 @@ button{
 
     .menu-mobile{
         display:block;
+    }
+
+    .menu-mobile img{
+        width:40px
     }
 
     .title h2{

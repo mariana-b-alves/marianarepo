@@ -443,13 +443,14 @@ input:focus {
 @media all and (max-width:680px){
 
     .profile-area{
-        display:grid;
-        flex-direction: block;
-        justify-self: center;
-        align-items: center;
+        display: grid;
+        width: 100vw;
+        float: none;
+    
 
         padding:8% 6% 8% 6%;
     }
+    
 
     .lateral-menu{
         display:block;
@@ -573,7 +574,11 @@ input:focus {
     }
 
 /* END OF FOOTER */
-
+@media screen and (max-width:1200px){
+    .menu-mobile img{
+        width:40px
+    }
+}
 
 @media all and (min-width:540px) and (max-width:768px){
    
