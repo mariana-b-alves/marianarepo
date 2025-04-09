@@ -31,16 +31,34 @@ let series = [
     },
 ];
 
-let tv = document.getElementById('tv');
+//Define the counter, starting at zero and iterate on loop.
+let counter = 0;
 
+//Define a variable called btn by fetching the id "btn"
+const button = document.getElementById("btn");
 
-series.map( serie =>{
-    tv.innerHTML+= `
-    <article>
+//By clicking the button, do everything inside it as follows...
+button.addEventListener('click', function(){
+    //Clear any text defined inside the id "tv" that may be inside of the HTML doc.
+    tv.innerHTML = "";
+
+    //Create a variable calles "serie", which includes everything inside teh array "series", starting from the value defined in counter (that is, 0)
+    const serie = series[counter];
+
+   //Add text inside of the HTML, using the info inside the array for the effect
+    tv.innerHTML= `
             <h2>${serie.title}</h2>
             <img src=${serie.imageUrl} alt="${serie.title}">
             <p>${serie.commentary}</p>
 
-            <p>Already read: ${serie.approved ? '✔️':'✖️'}</p>
-       </article> `
-});
+            <p>Approved: ${serie.approved ? '✔️':'✖️'}</p>`
+
+            //Increment the counter...
+            counter++;
+
+            //..but only until it reaches the full length of the array. Then it starts again at 0, on a loop.
+            if (counter >= series.length) {
+                counter = 0;
+            }
+  
+}, false)
