@@ -1,7 +1,7 @@
-import React from 'react';
 import '../../../public/css/form.css';
+import PropTypes from 'prop-types';
 
-/*SAME AS JS*/
+
 const TransactionErr = ({ onClose }) => {
   return (
     <section className="transactionErr open" onClick={onClose}>
@@ -14,11 +14,15 @@ const TransactionErr = ({ onClose }) => {
             <p>Tente outra vez mais tarde ou tente utilizar outro meio de pagamento.</p>
           </div>
 
-          <button className="btn" id="transactionErrCloseBtn" onClick={handleClose}>FECHAR</button>
+          <button className="btn" id="transactionErrCloseBtn" onClick={onClose}>FECHAR</button>
         </article>
       </article>
     </section>
   );
+};
+
+TransactionErr.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default TransactionErr;

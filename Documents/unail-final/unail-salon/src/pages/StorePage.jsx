@@ -7,8 +7,9 @@ import ShoppingCart from '../features/components/ShoppingCart';
 import TransactionForm from '../features/components/TransactionForm';
 import Header from '../features/templates/Header';
 import SideNav from '../features/templates/SideNav';
+import StoreArticles from '../features/templates/StoreArticles'; 
 
-function StorePage() {
+const StorePage = () => {
   const { totalItems } = useContext(CartContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [cartOpen, setCartOpen] = useState(false);
@@ -25,7 +26,7 @@ function StorePage() {
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <div>
         <Header
           totalItems={totalItems}
           onCartClick={() => setCartOpen(true)}
@@ -33,6 +34,10 @@ function StorePage() {
         />
 
         <SideNav isOpen={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
+
+        <section style={{color: '#57402c'}} className="title">
+            <h1>LOJA</h1>
+          </section>
 
         <main style={{ flex: "1" }}>
           <section className="searchBarSection">
@@ -48,30 +53,11 @@ function StorePage() {
             />
           </section>
 
-          {Object.entries(categories).map(([title, items]) => (
-            <section key={title}>
-              <section className="subtitle"><h1>{title}</h1></section>
-              <section className="store">
-                {filteredProducts(items)
-                  .filter(p =>
-                    p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                    p.description.toLowerCase().includes(searchTerm.toLowerCase())
-                  )
-                  .map(({ id, description, title, price, image, details }) => (
-                    <article key={id}>
-                      <figure className="c1xr3">
-                        <a href={`/product/${id}`}>
-                          <img src={image} alt={details} />
-                        </a>
-                      </figure>
-                      <p>{description}</p>
-                      <p>{title}</p>
-                      <p>{price.toFixed(2)}€</p>
-                    </article>
-                  ))}
-              </section>
-            </section>
-          ))}
+          <StoreArticles
+            categories={categories}
+            filteredProducts={filteredProducts}
+            searchTerm={searchTerm}
+          />
         </main>
       </div>
 

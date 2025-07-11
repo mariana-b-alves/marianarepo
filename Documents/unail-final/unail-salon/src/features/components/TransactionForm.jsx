@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
 import productData from '../../data/productData.json';
 import TransactionDone from './TransactionDone.jsx';
 import TransactionErr from './TransactionErr.jsx';
+import PropTypes from 'prop-types';
 import '../../../public/css/form.css';
 
 const TransactionForm = ({ onClose }) => {
@@ -306,5 +307,10 @@ const TransactionForm = ({ onClose }) => {
     </section>
   );
 };
+
+TransactionForm.propTypes = {
+  onClose: PropTypes.func.isRequired,
+};
+
 
 export default TransactionForm;

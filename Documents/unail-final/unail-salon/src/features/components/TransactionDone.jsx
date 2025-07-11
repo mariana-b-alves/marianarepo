@@ -1,5 +1,5 @@
-import React from 'react';
 import '../../../public/css/form.css';
+import PropTypes from 'prop-types';
 
 /*SAME AS JS*/
 const TransactionDone = ({ onClose }) => {
@@ -13,11 +13,15 @@ const TransactionDone = ({ onClose }) => {
             <p>A sua compra foi feita com sucesso. </p>
             <p>A sua encomenda irá ser enviada para avaliação. Será contactado por email para concluir a sua transação.</p>
           </div>
-          <button className="btn" id="transactionErrCloseBtn" onClick={onClose}>FECHAR</button>
+          <button className="btn" id="transactionDoneCloseBtn" onClick={onClose}>FECHAR</button>
         </article>
       </article>
     </section>
   );
+};
+
+TransactionDone.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default TransactionDone;

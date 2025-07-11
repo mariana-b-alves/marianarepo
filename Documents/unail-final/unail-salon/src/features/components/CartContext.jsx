@@ -1,6 +1,7 @@
 /*CartContext.jsx -> CART'S LOGIC AND DATA FETCHING SIDE*/
 
 import { createContext, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 export const CartContext = createContext();
 
@@ -23,19 +24,18 @@ export const CartProvider = ({ children }) => {
 
     setCartItems(prev =>
       prev.some(item => item.id === product.id && item.color === product.color)
-      /*IF SO, ADD MORE TO IT...*/
+        /*IF SO, ADD MORE TO IT...*/
         ? prev.map(item =>
             item.id === product.id && item.color === product.color
               ? { ...item, quantity: item.quantity + quantity }
               : item
           )
-                /*OTHERWISE, ADD NEW ONE.*/
-
+        /*OTHERWISE, ADD NEW ONE.*/
         : [...prev, { ...product, quantity }]
     );
   };
-    /*REMOVE A/THE PRODUCT TO CART*/
 
+  /*REMOVE A/THE PRODUCT TO CART*/
   const removeFromCart = (id, color) => {
     setCartItems(prev => prev.filter(item => !(item.id === id && item.color === color)));
   };
@@ -74,4 +74,8 @@ export const CartProvider = ({ children }) => {
       {children}
     </CartContext.Provider>
   );
+};
+
+CartProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

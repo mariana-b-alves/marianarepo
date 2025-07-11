@@ -1,9 +1,9 @@
-/*ShoppingCart.jsx -> CART'S LOGIC AND DATA FETCHING SIDE*/
+/*ShoppingCart.jsx -> CART'S CLIENT AND AESTHETIC SIDE*/
 
-
-import React, { useContext, useState } from 'react';
+import { useContext} from 'react';
 import { CartContext } from './CartContext';
 import productData from '../../data/productData.json';
+import PropTypes from 'prop-types';
 import '../../../public/css/shopping_cart_trans_done.css';
 
 /*SAME AS JS*/
@@ -103,6 +103,12 @@ const ShoppingCart = ({ isOpen, onClose, onConfirm }) => {
      
     </>
   );
+};
+
+ShoppingCart.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onConfirm: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

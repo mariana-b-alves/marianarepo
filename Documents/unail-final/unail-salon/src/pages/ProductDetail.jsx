@@ -9,7 +9,6 @@ import SideNav from '../features/templates/SideNav';
 import Footer from '../features/templates/Footer';
 import '../../public/css/products_index.css';
 
-
 const ProductDetail = () => {
   const { productId } = useParams();
   const { addToCart, totalItems } = useContext(CartContext);
@@ -80,7 +79,7 @@ const ProductDetail = () => {
         <SideNav isOpen={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
 
 
-      <main style={{ flexGrow: 1 }}>
+      <main style={{ flexGrow: 1, paddingBottom: '100px' }}>
         <section className="product">
           <figure className="c1xr3">
             <img src={product.image} alt={product.title} />

@@ -5,7 +5,7 @@ export function setupSearchFilter() {
 
     if (!searchBar) {
       return
-    } ;
+    }
   
     /* THE USER'S INPUT IS HEARD ON THE SEARCH BAR (VIA PRESSING KEYS)*/
 
