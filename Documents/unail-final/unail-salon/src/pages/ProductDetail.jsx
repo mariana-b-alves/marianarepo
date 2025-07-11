@@ -70,12 +70,7 @@ const ProductDetail = () => {
 
   /*SAME AS JS*/
   return (
-    <div
-      style= {{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
-      }}>
+    <div>
       <Header
           totalItems={totalItems}
           onCartClick={() => setCartOpen(true)}
