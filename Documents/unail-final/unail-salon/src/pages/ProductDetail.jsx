@@ -85,7 +85,7 @@ const ProductDetail = () => {
         <SideNav isOpen={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
 
 
-      <main style = { flexGrow: 1 }}>
+      <main style={{ flexGrow: 1 }}>
         <section className="product">
           <figure className="c1xr3">
             <img src={product.image} alt={product.title} />
